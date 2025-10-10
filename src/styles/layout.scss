@@ -1,0 +1,52 @@
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  
+    .header-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+  
+    nav {
+      margin-top: 0.2rem;
+      ul {
+        display: flex;
+        gap: 2.1rem;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+        li {
+          color: #bfc3c8;
+          font-size: 1.08rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: color 0.18s;
+          &:hover { color: #7e8083; }
+        }
+      }
+    }
+  }
+
+.grid-container {
+    column-count: 3; // handles that masonry effect
+    column-gap: 1rem;
+    padding: 1rem;
+
+    img {
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+        break-inside: avoid;
+        border-radius: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+        column-count: 2;
+    }
+
+    @media (max-width: 600px) {
+        column-count: 1;
+    }
+}
