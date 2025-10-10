@@ -23,6 +23,7 @@
           font-weight: 500;
           cursor: pointer;
           transition: color 0.18s;
+          
           &:hover { color: #7e8083; }
 
           &.more-item {
@@ -46,18 +47,11 @@
               line-height: 1;
               transition: color 0.18s;
               
-              &:hover {
-                color: #7e8083;
-              }
-              
               svg {
                 margin-top: 1px;
                 opacity: 0.8;
                 transition: transform 0.2s;
                 
-                &.chevron-open {
-                  transform: rotate(180deg);
-                }
               }
             }
 
@@ -66,24 +60,19 @@
               top: calc(100% + 0.5rem);
               left: 0;
               background: white;
-              border: 1px solid #e5e7eb;
-              border-radius: 0.5rem;
-              padding: 0.5rem 0;
-              min-width: 140px;
-              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-              z-index: 10;
+              border: 1px solid #ddd;
+              padding: 0.25rem 0;
+              min-width: 120px;
 
               .dropdown-item {
-                padding: 0.6rem 1rem;
-                color: #6b7280;
-                font-size: 1rem;
+                padding: 0.5rem 0.75rem;
+                color: #bfc3c8;
+                font-size: 1.08rem;
                 font-weight: 500;
                 cursor: pointer;
-                transition: all 0.15s;
 
                 &:hover {
-                  background: #f3f4f6;
-                  color: #374151;
+                  color: #7e8083;
                 }
               }
             }
@@ -103,7 +92,6 @@
         display: block;
         margin-bottom: 1rem;
         break-inside: avoid;
-        border-radius: 0.5rem;
     }
 
     @media (max-width: 900px) {
