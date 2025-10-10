@@ -1,17 +1,29 @@
+import { useState, useEffect } from 'react';
+import Navigation from './components/navigation';
+
 export default function Home() {
+  const [currentCategory, setCurrentCategory] = useState('');
+
+  useEffect(() => {
+    // Get initial category from URL
+    const params = new URLSearchParams(window.location.search);
+    setCurrentCategory(params.get('category') || '');
+
+    // Listen for category changes
+    const handleCategoryChange = () => {
+      const params = new URLSearchParams(window.location.search);
+      setCurrentCategory(params.get('category') || '');
+    };
+
+    window.addEventListener('categorychange', handleCategoryChange);
+    return () => window.removeEventListener('categorychange', handleCategoryChange);
+  }, []);
+
   return (
     <>
       <header className="header-container">
         <h1 className="header-title">Explore</h1>
-        <nav>
-          <ul>
-            <li>Lifestyle</li>
-            <li>Food</li>
-            <li>Home</li>
-            <li>Travel</li>
-            <li>More</li>
-          </ul>
-        </nav>
+        <Navigation />
       </header>
 
       <div className="grid-container">
