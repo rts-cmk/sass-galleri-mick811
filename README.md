@@ -1,51 +1,16 @@
-# Opgave: Interaktiv Galleri-Side med SASS
+# React + Vite
 
-## Introduktion
-I denne opgave skal du bruge dine SASS-færdigheder til at skabe en interaktiv galleri-side. Formålet er at lære at strukturere og style en webapplikation ved hjælp af SASS, samt at arbejde med GitHub til versionskontrol og aflevering. Det er et krav, at din side valideres uden fejl.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Opgavebeskrivelse
-1. **Opsætning af Projekt:**
-   - Klon dette repository til din lokale maskine.
-   - Lav en ny branch til at arbejde på, f.eks. `dev`. 
-   - Opret en grundlæggende HTML-struktur for din galleri-side (se vedlagte design).
-   - Find billeder på f.eks. [Colourbox](https://www.colourbox.com/) eller hent dem dynamisk via et API efter eget valg.
+Currently, two official plugins are available:
 
-2. **SASS Struktur:**
-   - Opret en `style` mappe i dit projekt.
-   - Opret følgende SASS-filer:
-     - `main.scss` (hovedfilen der importerer de andre filer)
-     - `_variables.scss` (til dine variabler som farver, skrifttyper osv.)
-     - `_mixins.scss` (til mixins)
-     - `_base.scss` (grundlæggende styling som reset, typografi osv.)
-     - `_layout.scss` (layout relateret styling)
-     - `_components.scss` (styling til individuelle komponenter som billedkort, modals osv.)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-3. **Styling med SASS:**
-   - Brug variabler til at definere farveskema og skrifttyper.
-   - Brug mixins til at skabe genanvendelige stykker CSS.
-   - Style din galleri-side ved hjælp af de oprettede SASS-filer.
-   - Brug BEM med nestede SASS regeler og mindst én SASS-funktion.
+## React Compiler
 
-4. **Interaktivitet:**
-   - Tilføj JavaScript for at gøre din galleri-side interaktiv (f.eks. ved at åbne billeder i en modal, filtrere billeder efter kategori osv.).
-   - Sørg for at din styling understøtter de forskellige tilstande af galleriet (f.eks. hover-effekter, aktive tilstande osv.).
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-5. **Responsivt Design:**
-   - Sørg for at din galleri-side er responsiv ved hjælp af media queries i SASS.
+## Expanding the ESLint configuration
 
-6. **Validering:**
-   - Brug en HTML-validator til at sikre, at din side valideres uden fejl. Du kan bruge [W3C Markup Validation Service](https://validator.w3.org/) til dette formål.
-
-7. **Aflevering:**
-   - Commit og push dit færdige projekt til din `dev` branch på GitHub.
-   - Lav en pull request til `main`.
-
-## Vurderingskriterier
-- Korrekt brug af SASS-struktur og -syntaks.
-- Kreativitet og æstetik i designet.
-- Funktionalitet og responsivitet af galleri-siden.
-- Ingen valideringsfejl i HTML.
-
----
-
-Held og lykke med opgaven! 😊
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

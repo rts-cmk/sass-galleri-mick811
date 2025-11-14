@@ -1,0 +1,104 @@
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  
+    .header-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+  
+    nav {
+      margin-top: 0.2rem;
+      ul {
+        display: flex;
+        gap: 2.1rem;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+        li {
+          color: #bfc3c8;
+          font-size: 1.08rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: color 0.18s;
+          
+          &:hover { color: #7e8083; }
+
+          &.more-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            
+            .more-button {
+              display: flex;
+              align-items: center;
+              gap: 0.3rem;
+              background: none;
+              border: none;
+              color: inherit;
+              font-size: inherit;
+              font-weight: inherit;
+              font-family: inherit;
+              cursor: pointer;
+              padding: 0;
+              margin: 0;
+              line-height: 1;
+              transition: color 0.18s;
+              
+              svg {
+                margin-top: 1px;
+                opacity: 0.8;
+                transition: transform 0.2s;
+                
+              }
+            }
+
+            .dropdown-menu {
+              position: absolute;
+              top: calc(100% + 0.5rem);
+              left: 0;
+              background: white;
+              border: 1px solid #ddd;
+              padding: 0.25rem 0;
+              min-width: 120px;
+
+              .dropdown-item {
+                padding: 0.5rem 0.75rem;
+                color: #bfc3c8;
+                font-size: 1.08rem;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                  color: #7e8083;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+.grid-container {
+    column-count: 3; // handles that masonry effect
+    column-gap: 1rem;
+    padding: 1rem;
+
+    img {
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+        break-inside: avoid;
+    }
+
+    @media (max-width: 900px) {
+        column-count: 2;
+    }
+
+    @media (max-width: 600px) {
+        column-count: 1;
+    }
+}
